@@ -3,8 +3,6 @@ class Calculator
 
   def calculate(exp)
     numbers, operands = parse(exp)
-    #p numbers
-    #p operands
     return evaluate(numbers, operands)
   end
 
@@ -72,6 +70,7 @@ class Calculator
       end
     end
 
+    # Second pass with '+' and '-' only
     sum = plus_minus_num[0]
 
     for i in 0...plus_minus_op.size()
